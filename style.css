@@ -1,0 +1,752 @@
+/*========================================
+  GOOGLE FONT
+========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#faf7f2;
+    overflow-x:hidden;
+}
+
+/*========================================
+  NAVBAR
+========================================*/
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    z-index:1000;
+
+    transition:.4s ease;
+}
+
+/* Added by JavaScript */
+
+.navbar.scrolled{
+
+    background: linear-gradient(
+90deg,
+#3E2723,
+#5D4037,
+#8D6E63,
+#5D4037
+);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+
+/*========================================
+ LOGO
+========================================*/
+
+.logo{
+
+    color:#FFD700;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+}
+
+.logo img{
+
+    width:150px;
+}
+
+/*========================================
+ MENU
+========================================*/
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    list-style:none;
+}
+
+.nav-links li{
+
+    position:relative;
+}
+
+.nav-links a{
+
+    color:#FFD700;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+/* Gold Underline */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#FFD700;
+
+    transition:.35s;
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+}
+
+.nav-links a:hover{
+
+    color:white;
+
+    text-shadow:0 0 15px gold;
+}
+
+/*========================================
+ HAMBURGER
+========================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    color:#FFD700;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+/*========================================
+ HERO
+========================================*/
+
+.hero{
+    /*width: 100%;
+    height: 100vh;
+    background:url("images/image.png") center center/cover no-repeat;
+    display:flex;
+    overlay: semi-transparent;
+    align-items:center;
+    object-fit: contain;
+    justify-content:space-between;
+    padding:120px 8%;
+    gap:50px;*/
+    width: 100%;
+    height: 1080px;
+    background-image:url("banner-image/image.png") ;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*.banner-section{
+    width: 100%;
+    height: 400px;
+    background-image:url("images/image.png") ;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+*/
+
+.hero-content{
+    flex:1;
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    line-height:1;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:650px;
+}
+
+/*========================================
+ BUTTON
+========================================*/
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 34px;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 25px rgba(212,175,55,.8);
+
+    background:white;
+}
+
+/*========================================
+        COLLECTION SECTION
+========================================*/
+
+.categories{
+
+    width:100%;
+
+    padding:100px 8%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+    background:#faf7f2;
+}
+
+/*========================================
+        CARD
+========================================*/
+
+.card{
+    width:330px;
+    background:white;
+    border-radius:18px;
+    padding:35px 30px;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+
+    transition:.4s ease;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* Gold Line */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#D4AF37;
+}
+
+/* Hover */
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+/*========================================
+        CARD TITLE
+========================================*/
+
+.card h2{
+
+    color:#b8860b;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+}
+
+/*.card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    font-size:16px;
+}*/
+.card p{
+    flex-grow:1;
+}
+
+/*========================================
+        CARD BUTTON
+========================================*/
+
+.card a{
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    border-radius:35px;
+
+    text-decoration:none;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.card a:hover{
+
+    background:#111;
+
+    color:#fff;
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 18px rgba(212,175,55,.7);
+}
+
+/*========================================
+        FOOTER
+========================================*/
+
+footer{
+
+    width:100%;
+
+    background: linear-gradient(180deg,#FFFDF9,#F5EAD5);
+
+    color:#fff;
+
+    padding:60px 8%;
+
+    text-align:center;
+
+    border: #D9C39A;
+}
+
+footer h2{
+
+    color: #C89B2C;
+
+    margin-bottom:15px;
+
+    font-size:32px;
+}
+
+footer p{
+
+    font-size:17px;
+
+    margin:10px 0;
+
+    color:#675A4D;
+}
+
+/*========================================
+        COPYRIGHT
+========================================*/
+
+footer p:last-child{
+
+    margin-top:25px;
+
+    font-size:15px;
+
+    color:#aaa;
+}
+
+/*========================================
+        WHATSAPP BUTTON
+========================================*/
+
+.whatsapp{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    z-index:9999;
+}
+
+.whatsapp img{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    transition:.35s;
+}
+
+.whatsapp img:hover{
+
+    transform:scale(1.12);
+
+    box-shadow:0 0 25px #25D366;
+}
+
+/*========================================
+        SMOOTH ANIMATION
+========================================*/
+
+.card,
+.btn,
+.nav-links a,
+.whatsapp img{
+
+    transition:.35s ease;
+}
+/*========================================
+        RESPONSIVE - TABLET
+========================================*/
+
+@media (max-width:992px){
+
+    .navbar{
+
+        padding:18px 5%;
+    }
+
+    .logo{
+
+        font-size:26px;
+    }
+
+    .nav-links{
+
+        gap:25px;
+    }
+
+    .hero{
+
+        min-height:80vh;
+
+        background-position:65% center;
+
+        padding:0 5%;
+    }
+
+    .hero-content h1{
+
+        font-size:50px;
+    }
+
+    .hero-content h2{
+
+        font-size:28px;
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+    }
+
+    .categories{
+
+        padding:80px 5%;
+    }
+
+    .card{
+
+        width:300px;
+    }
+
+}
+
+/*========================================
+        RESPONSIVE - MOBILE
+========================================*/
+
+@media (max-width:768px){
+
+    /* Navbar */
+
+    .navbar{
+
+        padding:18px 20px;
+    }
+
+    .logo{
+
+        font-size:24px;
+    }
+
+    /* Hamburger */
+
+    .menu-toggle{
+
+        display:block;
+    }
+
+    /* Navigation */
+
+    .nav-links{
+
+        position:absolute;
+
+        top:100%;
+
+        left:0;
+
+        width:100%;
+
+        background:rgba(35,15,5,.97);
+
+        backdrop-filter:blur(12px);
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+
+        padding:35px 0;
+
+        transform:translateY(-150%);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:.4s;
+    }
+
+    .nav-links.active{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+        visibility:visible;
+    }
+
+    .nav-links a{
+
+        font-size:20px;
+    }
+
+    /* Hero */
+
+    .hero{
+
+        min-height:60vh;
+
+        background-position:72% center;
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding:0 20px;
+    }
+
+    .hero-content{
+
+        max-width:100%;
+    }
+
+    .hero-content h1{
+
+        font-size:36px;
+    }
+
+    .hero-content h2{
+
+        font-size:22px;
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+    }
+
+    /* Cards */
+
+    .categories{
+
+        padding:60px 20px;
+
+        gap:25px;
+    }
+
+    .card{
+
+        width:100%;
+    }
+
+    footer{
+
+        padding:50px 20px;
+    }
+
+}
+
+/*========================================
+        SMALL MOBILE
+========================================*/
+
+@media (max-width:480px){
+
+    .logo{
+
+        font-size:20px;
+    }
+
+    .hero{
+
+        min-height:50vh;
+
+        background-position:75% center;
+    }
+
+    .hero-content h1{
+
+        font-size:28px;
+    }
+
+    .hero-content h2{
+
+        font-size:18px;
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+    }
+
+    .btn{
+
+        padding:12px 24px;
+
+        font-size:14px;
+    }
+
+    .whatsapp img{
+
+        width:55px;
+
+        height:55px;
+    }
+
+}
+
+/*========================================
+        ANIMATIONS
+========================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-content{
+
+    animation:fadeUp 1s ease;
+}
+
+.card{
+
+    animation:fadeUp .8s ease;
+}
+
+
