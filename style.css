@@ -189,13 +189,23 @@ width: 100%;
 
 
 /* Mobile */
-@media (max-width:768px) {
-    .hero {
-        background-image: url("banner-image/banner-mobile.jpg");
-        background-size: cover;
-        background-position: 35% center; /* try 30%, 35%, 40%, or 45% */
-        min-height: 100vh;
+@media (max-width:768px){
+
+    .hero{
+        min-height:100vh;
+        background-image:url("banner-image/banner-mobile.jpg");
+
+        /* Make the image a little smaller */
+        background-size:115% auto;
+
+        /* Move image upward */
+        background-position:center top;
+
+        background-repeat:no-repeat;
+
+        padding-top:70px;
     }
+
 }
 
 .hero-content{
