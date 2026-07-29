@@ -169,33 +169,38 @@ body{
  HERO
 ========================================*/
 
+/* Desktop */
 .hero{
-    /*width: 100%;
-    height: 100vh;
-    background:url("images/image.png") center center/cover no-repeat;
-    display:flex;
-    overlay: semi-transparent;
-    align-items:center;
-    object-fit: contain;
-    justify-content:space-between;
-    padding:120px 8%;
-    gap:50px;*/
-    width: 100%;
+    /*width:100%;
+    min-height:100vh;
+    background-image:url("banner-image/banner-desktop.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}*/
+
+width: 100%;
     height: 1080px;
-    background-image:url("banner-image/image.png") ;
+    background-image:url("banner-image/banner-desktop.jpg") ;
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
-/*.banner-section{
-    width: 100%;
-    height: 400px;
-    background-image:url("images/image.png") ;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+
+
+/* Mobile */
+@media (max-width:768px){
+
+    .hero{
+        min-height:100vh;
+        background-image:url("banner-image/banner-mobile.jpg");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        padding:0;
+    }
+
 }
-*/
 
 .hero-content{
     flex:1;
