@@ -10,6 +10,11 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+    touch-action: pan-y
+}
 
 html{
     scroll-behavior:smooth;
@@ -24,137 +29,109 @@ body{
   NAVBAR
 ========================================*/
 
-.navbar{
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-    position:fixed;
-    top:0;
-    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    width:100%;
+    padding: 20px 8%;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:20px 8%;
-
-    z-index:1000;
-
-    transition:.4s ease;
-}
-
-/* Added by JavaScript */
-
-.navbar.scrolled{
+    z-index: 99999;
 
     background: linear-gradient(
-90deg,
-#3E2723,
-#5D4037,
-#8D6E63,
-#5D4037
-);
+        90deg,
+        #3E2723,
+        #5D4037,
+        #8D6E63,
+        #5D4037
+    );
 
-    backdrop-filter:blur(15px);
-
-    -webkit-backdrop-filter:blur(15px);
-
-    box-shadow:0 8px 30px rgba(0,0,0,.25);
+    box-shadow: 0 8px 30px rgba(0,0,0,.25);
 }
 
-/*========================================
- LOGO
-========================================*/
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.logo{
+    gap: 40px;
 
-    color:#FFD700;
+    list-style: none;
 
-    font-size:30px;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-    cursor:pointer;
+    margin: 0;
+    padding: 0;
 }
 
-.logo img{
-
-    width:150px;
+.nav-links li {
+    position: relative;
 }
 
-/*========================================
- MENU
-========================================*/
-
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:40px;
-
-    list-style:none;
+.nav-links a {
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.nav-links li{
 
-    position:relative;
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 5px;
+        min-height: 80px;
+    }
+
+    .nav-links {
+        display: flex !important;
+
+        width: 100%;
+        height: auto;
+
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+
+        justify-content: center !important;
+        align-items: center !important;
+
+        gap: 8px 14px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .nav-links li {
+        display: list-item !important;
+        position: relative;
+    }
+
+    .nav-links a {
+        display: inline-block !important;
+
+        color: #FFD700 !important;
+
+        font-size: 14px !important;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 }
-
-.nav-links a{
-
-    color:#FFD700;
-
-    text-decoration:none;
-
-    font-size:18px;
-
-    font-weight:500;
-
-    transition:.3s;
-}
-
-/* Gold Underline */
-
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:#FFD700;
-
-    transition:.35s;
-}
-
-.nav-links a:hover::after{
-
-    width:100%;
-}
-
-.nav-links a:hover{
-
-    color:white;
-
-    text-shadow:0 0 15px gold;
-}
-
 /*========================================
  HAMBURGER
 ========================================*/
 
-.menu-toggle{
+/*.menu-toggle{
 
     display:none;
 
@@ -163,7 +140,7 @@ body{
     font-size:28px;
 
     cursor:pointer;
-}
+}/*
 
 /*========================================
  HERO
@@ -171,15 +148,8 @@ body{
 
 /* Desktop */
 .hero{
-    /*width:100%;
-    min-height:100vh;
-    background-image:url("banner-image/banner-desktop.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}*/
-
-width: 100%;
+    
+    width: 100%;
     height: 1080px;
     background-image:url("banner-image/banner-desktop.jpg") ;
     background-size: 100% 100%;
@@ -189,14 +159,14 @@ width: 100%;
 
 
 /* Mobile */
-@media (max-width:768px){
+@media (max-width:600px){
 
     .hero{
         min-height:100vh;
         background-image:url("banner-image/banner-mobile.jpg");
 
         /* Make the image a little smaller */
-        background-size:115% auto;
+        background-size:100% auto;
 
         /* Move image upward */
         background-position:center top;
@@ -759,5 +729,4 @@ footer p:last-child{
 
     animation:fadeUp .8s ease;
 }
-
 
