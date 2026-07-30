@@ -1,6 +1,4 @@
-/*========================================
-  GOOGLE FONT
-========================================*/
+/*Google Font*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -33,7 +31,7 @@ body{
     width: 100%;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     padding: 20px 8%;
@@ -77,11 +75,11 @@ body{
 
 
 @media (max-width: 768px) {
-
+/* 
     .navbar {
-        /* padding: 12px 5px; */
-        /* min-height: 80px; */
-    }
+        padding: 12px 5px; */
+        /* min-height: 80px;
+    } */
 
     .nav-links {
         display: flex !important;
@@ -491,11 +489,11 @@ footer p:last-child{
 @media (max-width:768px){
 
     /* Navbar */
-
+/* 
     .navbar{
 
-        /* padding:18px 20px; */
-    }
+        padding:18px 20px;
+    } */
 
     .logo{
 
@@ -614,9 +612,7 @@ footer p:last-child{
 
 }
 
-/*========================================
-        SMALL MOBILE
-========================================*/
+/*Small Mobile*/
 
 @media (max-width:480px){
 
@@ -663,9 +659,7 @@ footer p:last-child{
 
 }
 
-/*========================================
-        ANIMATIONS
-========================================*/
+/*Animation*/
 
 @keyframes fadeUp{
 
