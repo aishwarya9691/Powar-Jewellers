@@ -25,9 +25,6 @@ body{
     overflow-x:hidden;
 }
 
-/*========================================
-  NAVBAR
-========================================*/
 
 .navbar {
     position: fixed;
@@ -79,15 +76,11 @@ body{
 }
 
 
-/* =========================
-   MOBILE NAVBAR
-========================= */
-
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 12px 5px;
-        min-height: 80px;
+        /* padding: 12px 5px; */
+        /* min-height: 80px; */
     }
 
     .nav-links {
@@ -127,9 +120,7 @@ body{
         opacity: 1 !important;
     }
 }
-/*========================================
- HAMBURGER
-========================================*/
+
 
 /*.menu-toggle{
 
@@ -142,9 +133,7 @@ body{
     cursor:pointer;
 }/*
 
-/*========================================
- HERO
-========================================*/
+
 
 /* Desktop */
 .hero{
@@ -166,7 +155,7 @@ body{
         background-image:url("banner-image/banner-mobile.jpg");
 
         /* Make the image a little smaller */
-        background-size:100% auto;
+        /* background-size:100% auto; */
 
         /* Move image upward */
         background-position:center top;
@@ -203,9 +192,7 @@ body{
     max-width:650px;
 }
 
-/*========================================
- BUTTON
-========================================*/
+
 
 .btn{
 
@@ -235,9 +222,7 @@ body{
     background:white;
 }
 
-/*========================================
-        COLLECTION SECTION
-========================================*/
+
 
 .categories{
 
@@ -258,9 +243,7 @@ body{
     background:#faf7f2;
 }
 
-/*========================================
-        CARD
-========================================*/
+
 
 .card{
     width:330px;
@@ -303,9 +286,7 @@ body{
     box-shadow:0 20px 40px rgba(0,0,0,.18);
 }
 
-/*========================================
-        CARD TITLE
-========================================*/
+
 
 .card h2{
 
@@ -330,9 +311,7 @@ body{
     flex-grow:1;
 }
 
-/*========================================
-        CARD BUTTON
-========================================*/
+
 
 .card a{
 
@@ -364,9 +343,7 @@ body{
     box-shadow:0 0 18px rgba(212,175,55,.7);
 }
 
-/*========================================
-        FOOTER
-========================================*/
+
 
 footer{
 
@@ -401,9 +378,7 @@ footer p{
     color:#675A4D;
 }
 
-/*========================================
-        COPYRIGHT
-========================================*/
+
 
 footer p:last-child{
 
@@ -414,9 +389,7 @@ footer p:last-child{
     color:#aaa;
 }
 
-/*========================================
-        WHATSAPP BUTTON
-========================================*/
+
 
 .whatsapp{
 
@@ -449,9 +422,7 @@ footer p:last-child{
     box-shadow:0 0 25px #25D366;
 }
 
-/*========================================
-        SMOOTH ANIMATION
-========================================*/
+
 
 .card,
 .btn,
@@ -460,10 +431,8 @@ footer p:last-child{
 
     transition:.35s ease;
 }
-/*========================================
-        RESPONSIVE - TABLET
-========================================*/
 
+/*tablet*/
 @media (max-width:992px){
 
     .navbar{
@@ -517,9 +486,7 @@ footer p:last-child{
 
 }
 
-/*========================================
-        RESPONSIVE - MOBILE
-========================================*/
+/*mobile responsive*/
 
 @media (max-width:768px){
 
@@ -527,7 +494,7 @@ footer p:last-child{
 
     .navbar{
 
-        padding:18px 20px;
+        /* padding:18px 20px; */
     }
 
     .logo{
@@ -554,7 +521,7 @@ footer p:last-child{
 
         width:100%;
 
-        background:rgba(35,15,5,.97);
+        /* background:rgba(35,15,5,.97); */
 
         backdrop-filter:blur(12px);
 
